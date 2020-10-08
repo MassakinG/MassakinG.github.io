@@ -36,7 +36,6 @@
 
     .banner {
       width: 100%;
-      position: absolute;
     }
 
     .swiper-container {
@@ -53,15 +52,28 @@
 
 
     .a-few-words {
-      width:20%;
-	height:200px;
-	overflow:hidden;
-	margin:auto;
-      position: absolute;
+    width:100%;
+  	height:200px;
+	  overflow:hidden;
+  	margin:auto;
+      position: relative;
       top: 25%;
       left: 25%;
-      z-index: 100;
+      z-index: 200;
     }
+
+
+    @keyframes anis {
+	100% {
+	transform:translateY(-200px)
+}
+}
+.words {
+	animation:anis 25s linear infinite;
+}
+.words:hover {
+	animation-play-state:paused;
+}
 
     .since {
       position: absolute;
@@ -75,7 +87,7 @@
 </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar w/ text</a>
+      <a class="navbar-brand" href="#">Jonson's</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -86,14 +98,14 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="#">Menu</a>
           </li>
         </ul>
         <span class="navbar-text">
-          Navbar text with an inline element
+          Welcom!
         </span>
       </div>
     </nav>
@@ -102,10 +114,10 @@
       <!-- Swiper -->
       <div class="swiper-container banner_container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img width=100% src="./01-參考資料/Ad/AD1.jpg" alt=""></div>
-          <div class="swiper-slide"><img width=100% src="./01-參考資料/Ad/AD2.jpg" alt=""></div>
-          <div class="swiper-slide"><img width=100% src="./01-參考資料/Ad/AD3.jpg" alt=""></div>
-          <div class="swiper-slide"><img width=100% src="./01-參考資料/Ad/AD4.jpg" alt=""></div>
+          <div class="swiper-slide"><img width=100% src="./img/Ad/AD1.jpg" alt=""></div>
+          <div class="swiper-slide"><img width=100% src="./img/Ad/AD2.jpg" alt=""></div>
+          <div class="swiper-slide"><img width=100% src="./img/Ad/AD3.jpg" alt=""></div>
+          <div class="swiper-slide"><img width=100% src="./img/Ad/AD4.jpg" alt=""></div>
 
 
           <!-- Add Pagination -->
@@ -114,27 +126,7 @@
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
 
-  <!-- //Funder's words -->
 
-  <div class="a-few-words">
-    <div class="div2">
-        <p>人應該要常常記錄心情，以後才有完整的回憶。</p>
-        <p>阿甘說：「人生就像巧克力。」</p>
-        <p>你永遠猜不到下一個是什麼口味。</p>
-        <p>一盒巧克力裡面，將近30個口味的驚喜，看花樣不準確，吃的過程卻充滿驚奇</p>
-        <p>5有時候外表鍾意的巧克力滋味普通。</p>
-        <p>有時候看似不起眼的卻是口感豐富。</p>
-        <p>有些巧克力ㄧ口咬下，蹦出難以忘懷的複雜感受。</p>
-        <p>那一口巧克力呀....象徵人生。</p>
-        <p>冷熱、濃淡、甜蜜、歡愉，各種滋味交叉著。</p>
-        <p>想念著年輕時候追求起目標的狂熱，常常只要向目標靠近了一些些，就能欣喜若狂！</p>
-        <p>真怕生命一但順暢之後，生活會漸漸失去挑戰。</p>
-        <p>老師傅語重心長地說：「要保持生活的優質就不能開分店。」</p>
-        <p>花花世界，明白人不多。</p>
-        <p>生意是一輩子的戰爭，陪孩子卻是一生的儲蓄。</p>
-        <p>兩者都在考驗自己的深度與智慧。</p>
-    </div>
-</div>
 
           <!-- //Logo~since -->
         </div>
@@ -145,25 +137,48 @@
 
       </div>
 
-
+      <div class="a-few-words">
+        <div class="words">
+            <p></p>
+            <p>人應該要常常記錄心情，以後才有完整的回憶。</p>
+            <p>阿甘說：「人生就像巧克力。」</p>
+            <p>你永遠猜不到下一個是什麼口味。</p>
+            <p>一盒巧克力裡面，將近30個口味的驚喜，看花樣不準確，吃的過程卻充滿驚奇</p>
+            <p>5有時候外表鍾意的巧克力滋味普通。</p>
+            <p>有時候看似不起眼的卻是口感豐富。</p>
+            <p>有些巧克力ㄧ口咬下，蹦出難以忘懷的複雜感受。</p>
+            <p>冷熱、濃淡、甜蜜、歡愉，各種滋味交叉著。</p>
+            <p>那一口巧克力呀....象徵人生。</p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+      </div>
 
       <!-- Latest News -->
-
-      <div class="container text-center p-5">
+      <section class="container text-center p-5">
         <h3>最新消息</h3>
-
-          <div class="col"> 2020年強森乳酪蛋糕店「姐妹」新提袋上市!
+<h5>2020年強森乳酪蛋糕店「姐妹」新提袋上市!</h5>
+          <div class="col d-flex"> 
             <hr>
-              <img src="https://picsum.photos/200?random1" alt="">
-              <img src="https://picsum.photos/200?random2" alt="">
-              <img src="https://picsum.photos/200?random3" alt="">
-              <img src="https://picsum.photos/200?random4" alt="">
+            <div class="card" style="width: 18rem;">
+              <img src="Img/手袋/袋a1＋字.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="Img/手袋/袋a2＋字.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="Img/手袋/袋a3＋字.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="Img/手袋/袋a4＋字.jpg" class="card-img-top" alt="...">
+            </div>
           </div>
           
         
-      </div>
+        </section>
       <!-- About Jonson's -->
-      <div class="container-fluid bg-light">
+      <section class="container-fluid bg-light">
         <div class="container p-5">
           <h1 class="text-center">關於強森</h1>
           <div class="row"></div>
@@ -190,13 +205,15 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
 <!-- Jonson's stories -->
-<div class="container p-5">
+<section class="container p-5">
   <h1 class="text-center">強森故事</h1>
-    <div class="row p-5">
+    <div class="row">
       <div class="col-lg-4">
-        <img width=100% src= "https://picsum.photos/200?random5" alt="">
+        <div class="card" style="width: 18rem;">
+          <img src="Img/Cheesecake soap.jpg" class="card-img-top" alt="...">
+        </div>
         <div class="textarea p-3">
           <h3>強森生生環遊世界</h3>
           <li>強森先生總說自己是瘋狂科學家：我們花了很多時間測試蛋糕的比例</li>
@@ -205,7 +222,9 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <img width=100% src= "https://picsum.photos/200?random6" alt="">
+        <div class="card" style="width: 18rem;">
+          <img src="Img/關於強森/Book.jpg" class="card-img-top" alt="...">
+        </div>
         <div class="textarea p-3">
           <h3>強森蛋糕故事</h3>
           <li>了解乳酪、運用乳酪，讓乳酪發揮出最理想的口感</li>
@@ -214,7 +233,9 @@
           <li>到底你愛吃什麼口味呢？</li>
         </div>
       </div> <div class="col-lg-4">
-        <img width=100% src= "https://picsum.photos/200?random7" alt="">
+        <div class="card" style="width: 18rem;">
+          <img src="Img/7馬.jpg" class="card-img-top" alt="...">
+        </div>
         <div class="textarea p-3">
           <h3>女兒ee的插畫</h3>
           <li>打兩個女兒6歲開始就有計劃地搜集至14歲，大約有600張草稿</li>
@@ -224,27 +245,30 @@
         </div>
       </div>
     </div>
-</div>
+  </section>
 <!-- Product -->
-<div class="container-fluid bg-light">
+<section class="container-fluid bg-light">
   <div class="container text-center p-5">
     <h1 class="text-center">Menu</h1>
   <MENU class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5">
-    <div class="col"><img width=100% src= "https://picsum.photos/200?random8" alt="">原味1號</div>
-    <div class="col"><img width=100% src= "https://picsum.photos/200?random9" alt="">原味2號</div>
-    <div class="col"><img width=100% src= "https://picsum.photos/200?random10" alt="">原味3號</div>
-    <div class="col"><img width=100% src= "https://picsum.photos/200?random11" alt="">法式可可巧克力</div>
-    <div class="col"><img width=100% src= "https://picsum.photos/200?random12" alt="">雙層綠抹茶</div>
-    <div class="col"><img width=100% src= "https://picsum.photos/200?random13" alt="">奶油核桃芭娜娜</div>
-    <div class="col"><img width=100% src= "https://picsum.photos/200?random14" alt="">紐約蘋果</div>
-    <div class="col"><img width=100% src= "https://picsum.photos/200?random15" alt="">香水諾曼地</div>
-    <div class="col"><img width=100% src= "https://picsum.photos/200?random16" alt="">夏綠蒂芒果</div>
-    <div class="col"><img width=100% src= "https://picsum.photos/200?random17" alt="">冰摩司乳酪</div>
-    <div class="col"><img width=100% src= "https://picsum.photos/200?random18" alt="">冰酒乳酪</div>
-  </MENU>
-  </div>
-</div>
+    <div class="col"><img width=100% src= "Img/產品/黑派克.jpg" alt="">招牌原味</div>
+    <div class="col"><img width=100% src= "img/產品/優格檸檬.jpg" alt="">優格檸檬</div>
+    <div class="col"><img width=100% src= "Img/產品/奧地利野莓.jpg" alt="">奧地利野莓</div>
+    <div class="col"><img width=100% src= "Img/產品/翡翠綠茶.jpg" alt="">翡翠綠茶</div>
+    <div class="col"><img width=100% src= "Img/產品/草莓黑派水滴.jpg" alt="">草莓黑派水滴</div>
+    <div class="col"><img width=100% src= "Img/產品/酒釀荔枝櫻桃重乳酪.jpg" alt="">酒釀櫻桃</div>
+    <div class="col"><img width=100% src= "img/產品/香水諾曼地.jpg" alt="">香水諾曼地</div>
+    <div class="col"><img width=100% src= "Img/產品/夏綠蒂芒果.jpg" alt="">夏綠蒂芒果</div>
+    <div class="col"><img width=100% src= "Img/產品/冰摩司.jpg" alt="">冰摩司乳酪</div>
+    <div class="col"><img width=100% src= "Img/產品/冰酒.jpg" alt="">冰酒乳酪</div>
+      <!-- //Funder's words -->
+ 
 
+  </MENU>
+  
+  </div>
+</section>
+<!-- Footer -->
 
 
       <!-- Optional JavaScript -->
