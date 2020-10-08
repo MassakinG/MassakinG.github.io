@@ -20,6 +20,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
+  <!-- lightbox -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipuiaD5ymEo9520lyoVOo9jCQOCA==" crossorigin="anonymous" />
+
   <style>
     html,
     body {
@@ -27,11 +31,14 @@
       height: 100%;
       box-sizing: border-box;
       font-family: 'Noto Sans TC', sans-serif, 'Great Vibes', cursive;
+      scroll-behavior: smooth;
+      
     }
 
     body {
       margin: 0;
       padding: 0;
+      text-decoration: none;
     }
 
     .banner {
@@ -86,27 +93,30 @@
   </style>
 </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Jonson's</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Menu</a>
-          </li>
-        </ul>
-        <span class="navbar-text">
-          Welcom!
-        </span>
+ <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#">強森乳酪</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#story">Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#menu">Menu</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -134,9 +144,8 @@
           <h1>Jonson's Family</h1>
           <h3>~Since 2003</h3>
         </div>
-
       </div>
-
+ <!-- //Funder's words -->
       <div class="a-few-words">
         <div class="words">
             <p></p>
@@ -156,7 +165,7 @@
       </div>
 
       <!-- Latest News -->
-      <section class="container text-center p-5">
+      <section id="news" class="container text-center p-5">
         <h3>最新消息</h3>
 <h5>2020年強森乳酪蛋糕店「姐妹」新提袋上市!</h5>
           <div class="col d-flex"> 
@@ -178,7 +187,7 @@
         
         </section>
       <!-- About Jonson's -->
-      <section class="container-fluid bg-light">
+      <section id="about" class="container-fluid bg-light">
         <div class="container p-5">
           <h1 class="text-center">關於強森</h1>
           <div class="row"></div>
@@ -207,7 +216,7 @@
         </div>
       </section>
 <!-- Jonson's stories -->
-<section class="container p-5">
+<section id="story" class="container p-5">
   <h1 class="text-center">強森故事</h1>
     <div class="row">
       <div class="col-lg-4">
@@ -247,21 +256,22 @@
     </div>
   </section>
 <!-- Product -->
-<section class="container-fluid bg-light">
+<section id="menu" class="container-fluid bg-light">
   <div class="container text-center p-5">
     <h1 class="text-center">Menu</h1>
-  <MENU class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5">
-    <div class="col"><img width=100% src= "Img/產品/黑派克.jpg" alt="">招牌原味</div>
-    <div class="col"><img width=100% src= "img/產品/優格檸檬.jpg" alt="">優格檸檬</div>
-    <div class="col"><img width=100% src= "Img/產品/奧地利野莓.jpg" alt="">奧地利野莓</div>
-    <div class="col"><img width=100% src= "Img/產品/翡翠綠茶.jpg" alt="">翡翠綠茶</div>
-    <div class="col"><img width=100% src= "Img/產品/草莓黑派水滴.jpg" alt="">草莓黑派水滴</div>
-    <div class="col"><img width=100% src= "Img/產品/酒釀荔枝櫻桃重乳酪.jpg" alt="">酒釀櫻桃</div>
-    <div class="col"><img width=100% src= "img/產品/香水諾曼地.jpg" alt="">香水諾曼地</div>
-    <div class="col"><img width=100% src= "Img/產品/夏綠蒂芒果.jpg" alt="">夏綠蒂芒果</div>
-    <div class="col"><img width=100% src= "Img/產品/冰摩司.jpg" alt="">冰摩司乳酪</div>
-    <div class="col"><img width=100% src= "Img/產品/冰酒.jpg" alt="">冰酒乳酪</div>
-      <!-- //Funder's words -->
+  <MENU class="row row-cols-sm-2 row-cols-md-4 row-cols-lg-5">
+    <a href="Img/產品/黑派克.jpg" data-lightbox="Lightbox2" data-title="招牌原味"><img class="col" src= "Img/產品/黑派克.jpg" alt="">招牌原味</a>
+    <a href="Img/產品/優格檸檬.jpg" data-lightbox="Lightbox2" data-title="我優格檸檬"><img class="col" src= "img/產品/優格檸檬.jpg" alt="">優格檸檬</a>
+    <a href="Img/產品/奧地利野莓.jpg" data-lightbox="Lightbox2" data-title="奧地利野莓"><img class="col" src= "Img/產品/奧地利野莓.jpg" alt="">奧地利野莓</a>
+    <a href="Img/產品/草莓水滴巧克力乳酪.jpg" data-lightbox="Lightbox2" data-title="草莓水滴巧克力"><img class="col" src= "Img/產品/草莓水滴巧克力乳酪.jpg" alt="">草莓水滴巧克力</a>
+    <a href="Img/產品/萊姆葡萄重乳酪.jpg" data-lightbox="Lightbox2" data-title="萊姆葡萄重乳酪"><img class="col" src= "Img/產品/萊姆葡萄重乳酪.jpg" alt="">萊姆葡萄重乳酪</a>
+    <a href="Img/產品/酒釀荔枝櫻桃重乳酪.jpg" data-lightbox="Lightbox2" data-title="酒釀櫻桃"><img class="col" src= "Img/產品/酒釀荔枝櫻桃重乳酪.jpg" alt="">酒釀櫻桃</a>
+    <a href="Img/產品/香水諾曼地.jpg" data-lightbox="Lightbox2" data-title="香水諾曼地"><img class="col" src= "img/產品/香水諾曼地.jpg" alt="">香水諾曼地</a>
+    <a href="Img/產品/夏綠蒂芒果.jpg" data-lightbox="Lightbox2" data-title="夏綠蒂芒果"><img class="col" src= "Img/產品/夏綠蒂芒果.jpg" alt="">夏綠蒂芒果</a>
+    <a href="Img/產品/冰摩司.jpg" data-lightbox="Lightbox2" data-title="冰摩司乳酪"><img class="col" src= "Img/產品/冰摩司.jpg" alt="">冰摩司乳酪</a>
+    <a href="Img/產品/冰酒.jpg" data-lightbox="Lightbox2" data-title="冰酒乳酪"><img class="col" src= "Img/產品/冰酒.jpg" alt="">冰酒乳酪</a>
+
+     
  
 
   </MENU>
@@ -269,7 +279,22 @@
   </div>
 </section>
 <!-- Footer -->
-
+<footer>
+  <div class="container">
+    <p>&copy; 強森乳酪 2020. All Rights Reserved.</p>
+    <ul class="list-inline">
+      <li class="list-inline-item">
+        <a href="#">Privacy</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#">Terms</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#">FAQ</a>
+      </li>
+    </ul>
+  </div>
+</footer>
 
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -301,7 +326,12 @@
           },
 
         });
-      </script>
+
+    </script>
+    <!------JQ&Lightbox--->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous"></script>
+
   </body>
 
 </html>
