@@ -51,17 +51,25 @@
 
     }
 
-
     .a-few-words {
-      width:20%;
+	width:80%;
 	height:200px;
 	overflow:hidden;
 	margin:auto;
-      position: absolute;
-      top: 25%;
-      left: 25%;
-      z-index: 100;
-    }
+	position:relative;
+  
+}
+@keyframes anis {
+	100% {
+	transform:translateY(-200px)
+}
+}
+.words {
+	animation:anis 20s linear infinite;
+}
+.words:hover {
+	animation-play-state:paused;
+}
 
     .since {
       position: absolute;
@@ -106,35 +114,13 @@
           <div class="swiper-slide"><img width=100% src="./01-參考資料/Ad/AD2.jpg" alt=""></div>
           <div class="swiper-slide"><img width=100% src="./01-參考資料/Ad/AD3.jpg" alt=""></div>
           <div class="swiper-slide"><img width=100% src="./01-參考資料/Ad/AD4.jpg" alt=""></div>
-
-
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
           <!-- Add Arrows -->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
 
-  <!-- //Funder's words -->
-
-  <div class="a-few-words">
-    <div class="div2">
-        <p>人應該要常常記錄心情，以後才有完整的回憶。</p>
-        <p>阿甘說：「人生就像巧克力。」</p>
-        <p>你永遠猜不到下一個是什麼口味。</p>
-        <p>一盒巧克力裡面，將近30個口味的驚喜，看花樣不準確，吃的過程卻充滿驚奇</p>
-        <p>5有時候外表鍾意的巧克力滋味普通。</p>
-        <p>有時候看似不起眼的卻是口感豐富。</p>
-        <p>有些巧克力ㄧ口咬下，蹦出難以忘懷的複雜感受。</p>
-        <p>那一口巧克力呀....象徵人生。</p>
-        <p>冷熱、濃淡、甜蜜、歡愉，各種滋味交叉著。</p>
-        <p>想念著年輕時候追求起目標的狂熱，常常只要向目標靠近了一些些，就能欣喜若狂！</p>
-        <p>真怕生命一但順暢之後，生活會漸漸失去挑戰。</p>
-        <p>老師傅語重心長地說：「要保持生活的優質就不能開分店。」</p>
-        <p>花花世界，明白人不多。</p>
-        <p>生意是一輩子的戰爭，陪孩子卻是一生的儲蓄。</p>
-        <p>兩者都在考驗自己的深度與智慧。</p>
-    </div>
-</div>
+ 
 
           <!-- //Logo~since -->
         </div>
@@ -145,7 +131,22 @@
 
       </div>
 
-
+ <!-- //Funder's words -->
+ <div class="a-few-words">
+  <div class="words">
+      <p></p>
+      <p>人應該要常常記錄心情，以後才有完整的回憶。</p>
+      <p>阿甘說：「人生就像巧克力。」</p>
+      <p>你永遠猜不到下一個是什麼口味。</p>
+      <p>一盒巧克力裡面，將近30個口味的驚喜，看花樣不準確，吃的過程卻充滿驚奇</p>
+      <p>5有時候外表鍾意的巧克力滋味普通。</p>
+      <p>有時候看似不起眼的卻是口感豐富。</p>
+      <p>有些巧克力ㄧ口咬下，蹦出難以忘懷的複雜感受。</p>
+      <p>冷熱、濃淡、甜蜜、歡愉，各種滋味交叉著。</p>
+      <p>那一口巧克力呀....象徵人生。</p>
+       
+  </div>
+</div>
 
       <!-- Latest News -->
 
